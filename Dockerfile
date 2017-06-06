@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-MAINTAINER Ming Chen
+MAINTAINER Andrii Rakhimov
 
 ENV ANDROID_HOME /opt/android-sdk
 ENV ANDROID_NDK  /opt/android-ndk
