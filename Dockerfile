@@ -55,17 +55,7 @@ RUN apt-get update && \
     apt-add-repository -y ppa:openjdk-r/ppa && \
     apt-get install -y openjdk-8-jdk && \
     rm -rf /var/lib/apt/lists/ && \
-    apt-get clean  && \
-
-    # Install nodejs, npm etc.
-    # https://github.com/nodesource/distributions
-    curl -sL -k https://deb.nodesource.com/setup_${NODE_VERSION} | bash -  && \
-    apt-get install -yq nodejs && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
-    npm install -g npm && \
-    npm install --quiet -g npm-check-updates eslint jshint node-gyp gulp bower mocha karma-cli react-native-cli && \
-    npm cache clean
+    apt-get clean
 
 # Install Android SDK
 RUN wget -q -O tools.zip https://dl.google.com/android/repository/tools_r${ANDROID_SDK_VERSION}-linux.zip && \
